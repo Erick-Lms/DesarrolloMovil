@@ -1,0 +1,30 @@
+<ion-content class="ion-padding ion-text-center">
+    <img src="assets/icon/woman.png" alt="Imagen de perfil" class="imagen-perfil" />
+
+
+  <div class="container flex flex-justify-content-center align-items-center" >
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" formControlName="username"></ion-input>
+        </ion-item>
+        <div *ngIf="isUsernameInvalid()">
+          <ion-text color="danger" class="ion-padding-start">
+            Usuario es requerido.
+          </ion-text>
+        </div>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <div *ngIf="isPasswordInvalid()">
+          <ion-text color="danger" class="ion-padding-start">
+            Contraseña es requerida.
+          </ion-text>
+        </div>
+
+        <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Iniciar sesión</ion-button>
+      </form>
+  </div>
+</ion-content>
