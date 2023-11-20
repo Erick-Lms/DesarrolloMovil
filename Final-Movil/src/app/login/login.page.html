@@ -1,7 +1,4 @@
 <ion-content class="ion-padding ion-text-center">
-    <img src="assets/icon/woman.png" alt="Imagen de perfil" class="imagen-perfil" />
-
-
   <div class="container flex flex-justify-content-center align-items-center" >
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <ion-item>
@@ -24,7 +21,7 @@
           </ion-text>
         </div>
 
-        <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Iniciar sesión</ion-button>
+        <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Ingresar</ion-button>
       </form>
   </div>
 </ion-content>
