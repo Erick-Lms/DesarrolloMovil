@@ -21,5 +21,18 @@
         </ion-card-header>
     </ion-card>
   </div>
+
+  <ion-row class="ion-text-center option-list" *ngIf="options && options.length > 0">
+    <ng-template *ngFor="let option of options | keyvalue">
+      <div>
+        <ion-button slot="icon-only" [color]="option.value?.color">
+          <ion-icon [name]="option.value?.icon"></ion-icon>
+        </ion-button>
+        <ion-label>{{option.value?.name}}</ion-label>
+      </div>
+    </ng-template>
+  </ion-row>
   
+  
+
 </ion-content>
