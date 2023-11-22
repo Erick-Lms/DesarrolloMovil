@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonTabs } from '@ionic/angular';
+import { TabsService } from 'src/app/tabs.service';
 
 @Component({
   selector: 'app-tabs',
@@ -12,11 +13,13 @@ export class TabsPage implements OnInit {
   tabs!: IonTabs;
   selectedTab: any;
 
-  constructor() { }
+  constructor(private tabsService: TabsService) { }
 
+  ionViewWillEnter() {
+    this.tabsService.toggleTabs(true);
+  }
   ngOnInit() {
   }
-
   setCurrentTab() {
     this.selectedTab = !this.tabs.getSelected();
     console.log(this.selectedTab);

@@ -7,6 +7,7 @@ import { IngresarComponent } from 'src/app/components/ingresar/ingresar.componen
 import { SacarComponent } from 'src/app/components/sacar/sacar.component';
 import { InfoComponent } from 'src/app/components/info/info.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -17,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'src/app/components/transferencia', component:TransferenciaComponent
-  },
+  },  
   {
     path: 'src/app/components/sacar', component:SacarComponent
   },

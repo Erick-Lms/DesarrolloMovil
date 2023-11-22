@@ -61,9 +61,6 @@ ion-header {
       }
     }  
    }
-  //  .swiper-slide {
-  //   text-align: center;
-  // }
   
   .rounded-button {
     border-radius: 50px; /* Ajusta el valor según sea necesario para obtener la forma deseada */
@@ -86,12 +83,13 @@ ion-header {
     font-size: 14px; /* Ajusta el valor según sea necesario */
   }
   .mov {
-    display: flex;
-    padding-top: 40px;
-    margin-left: 30px;
+    margin: 25px;
+    padding: 16px;
+    align-items: center;
+    background-color: rgba(73, 110, 230, 0.596);
+    border-radius: 20px 5px;
   }
   .list-cambios {
-    margin: 20px;
-    
+    margin: 20px;    
   }
    

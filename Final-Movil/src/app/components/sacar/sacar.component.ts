@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TabsService } from 'src/app/tabs.service';
 
 @Component({
   selector: 'app-sacar',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SacarComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private tabsService: TabsService) { }
 
+  ionViewWillEnter() {
+    this.tabsService.toggleTabs(false);
+  }
   ngOnInit() {}
 
 }
