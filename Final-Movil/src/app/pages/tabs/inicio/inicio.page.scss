@@ -1,7 +1,17 @@
+@import '~swiper/swiper-bundle.css';
+
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+}
+
 ion-header {
     background: transparent;
     ion-toolbar {
-      --background: transparent;
+      --background: transparent solid;
     ion-text {
         margin: 20px;
         color: white;
@@ -10,17 +20,17 @@ ion-header {
   }
   ion-content {
     .main-header {
-    height: 45vh;
+    height: 330px;
     width: 150%;
     background: linear-gradient(90deg, var(--ion-color-tertiary)10%, var(--ion-color-primary)100%);    margin-left: -12vh;
     margin-top: -80px;
     background-attachment: fixed;
     }
     ion-card {
-    height: 25vh;
+    height: 200px;
     width: 84vw;
     position: absolute;
-    top: 20%;
+    top: 150px;
     left: 47%;
     transform: translate(-50%, -50%);
     border-radius: 3rem;
@@ -29,19 +39,57 @@ ion-header {
       font-family: Arial, Helvetica, sans-serif;
       ion-card-title {
         font-size: 1.5rem;
-        margin: 50px;
-      }
-      ion-card-content {
-        font-size: 2rem;    
+        margin: 40px;
       }
     }
     }
    }
    
-   @media (max-width: 600px) {
-    ion-card {
-    width: 100%;
-    height: auto;
-    }
+   ion-row.options-list {
+    padding: 5vh 0;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      ion-button {
+        --border-radius: 15px;
+        height: 8vh;
+      }
+      ion-label {
+        font-size: 1rem;
+      }
+    }  
    }
+  
+  .rounded-button {
+    border-radius: 50px; /* Ajusta el valor según sea necesario para obtener la forma deseada */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .icon-image {
+    width: 45px; /* Ajusta el valor según sea necesario */
+    height: 55px; /* Ajusta el valor según sea necesario */
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .button-label {
+    margin-top: 5px; /* Ajusta el valor según sea necesario */
+    font-size: 14px; /* Ajusta el valor según sea necesario */
+  }
+  .mov {
+    margin: 25px;
+    padding: 16px;
+    align-items: center;
+    background-color: rgba(73, 110, 230, 0.596);
+    border-radius: 20px 5px;
+  }
+  .list-cambios {
+    margin: 20px;    
+  }
    
