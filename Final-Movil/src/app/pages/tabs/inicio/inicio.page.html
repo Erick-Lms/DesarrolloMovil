@@ -21,18 +21,29 @@
         </ion-card-header>
     </ion-card>
   </div>
-
-  <ion-row class="ion-text-center option-list" *ngIf="options && options.length > 0">
-    <ng-template *ngFor="let option of options | keyvalue">
-      <div>
-        <ion-button slot="icon-only" [color]="option.value?.color">
-          <ion-icon [name]="option.value?.icon"></ion-icon>
+  <!-- iconos flotantes -->
+  <div class="swiper-container" #swiperContainer>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let option of options">
+        <!-- Utiliza el ion-button solo para mantener el estilo de botón -->
+        <ion-button [color]="option.color" class="rounded-button" routerLink="{{option.route}}">
+          <!-- Muestra la imagen encima del texto -->
+          <img src="{{ option.image }}" alt="{{ option.name }}-image" class="icon-image">
         </ion-button>
-        <ion-label>{{option.value?.name}}</ion-label>
+        <ion-label class="button-label">{{ option.name }}</ion-label>
       </div>
-    </ng-template>
-  </ion-row>
-  
-  
-
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- funcionalidad de movimientos -->
+  <div class="mov">
+    <ion-label>Movimientos</ion-label>
+   </div>
+   <div class="list-cambios">
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+        {{ item }}
+      </ion-item>
+     </ion-list>
+  </div>
 </ion-content>
