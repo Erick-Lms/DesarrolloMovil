@@ -1,0 +1,17 @@
+.boton-add {
+    ion-button {
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        img{
+            position: relative;
+            height: 50px;
+            width: 50px;
+            margin: 15px;
+        }    
+        ion-label {
+            text-align: center;
+            color: black;          
+        }
+    }  
+}
