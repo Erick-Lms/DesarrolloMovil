@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ingresar.component.scss'],
 })
 export class IngresarComponent  implements OnInit {
-
-  constructor() { }
+  monto: number;
+  constructor() {
+    this.monto = 0;
+  }
+  guardarMonto() {
+    // Aquí puedes realizar alguna acción con el monto ingresado, como enviarlo a un servidor, etc.
+    console.log('Monto ingresado:', this.monto);
+  }
 
   ngOnInit() {}
 

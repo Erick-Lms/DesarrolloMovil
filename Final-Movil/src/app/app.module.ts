@@ -13,9 +13,10 @@ import { IngresarComponent } from './components/ingresar/ingresar.component';
 import { SacarComponent } from './components/sacar/sacar.component';
 import { TransferenciaComponent } from './components/transferencia/transferencia.component';
 
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent, InfoComponent, IngresarComponent, SacarComponent, TransferenciaComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
