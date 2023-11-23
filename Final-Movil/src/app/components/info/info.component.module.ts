@@ -6,6 +6,7 @@ import { InfoComponent } from './info.component';
 
 @NgModule({
   declarations: [
+
     InfoComponent,
     // Otros componentes si los tienes
   ],

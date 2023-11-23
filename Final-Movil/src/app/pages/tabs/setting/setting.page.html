@@ -1,6 +1,11 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar color="secondary">
-    <ion-title color="primary">Configuraciones</ion-title>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Configuración
+    </ion-title>
+    <ion-button routerLink="/tabs" expand="block" shape="round">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 <ion-content >
@@ -42,9 +47,4 @@
     </ion-item>
 
   </ion-list>
-
-  <ion-button fill="clear" class="ion-margin" color="danger">
-    <ion-icon name="log-out" slot="start"></ion-icon>Cerrar sesión
-  </ion-button>
-
 </ion-content>

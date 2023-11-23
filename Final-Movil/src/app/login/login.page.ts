@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';  // Importa el servicio Router
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,12 @@ import { Router } from '@angular/router';  // Importa el servicio Router
 export class LoginPage {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(
+    private fb: FormBuilder, 
+    private router: Router , 
+    public toastController: ToastController,
+    public  alertController: AlertController
+    ) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
@@ -39,8 +45,25 @@ export class LoginPage {
         // Navegar a la página principal después del inicio de sesión
         this.router.navigate(['/tabs']);
       } else {
-        alert('Error de inicio de sesión. Verifica tu usuario y contraseña.');
+        this.presentAlert1();
       }
     }
   }
+  
+  async presentAlert1(){
+    const alert= await this.alertController.create({
+      
+      header:'ERROR',
+      message: 'Error de Inicio de Sesión. Verifica tu Usuario y Contraseña.',
+      buttons: ['OK'],
+      backdropDismiss: false
+    })
+    await alert.present();
+  }
+  //   const { role } = await alert.onDidDismiss();
+  //   if (role === 'ok') {
+  //   }
+  // }
+  
+
 }

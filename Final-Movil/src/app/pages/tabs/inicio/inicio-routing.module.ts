@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { InicioPage } from './inicio.page';
 import { TransferenciaComponent } from 'src/app/components/transferencia/transferencia.component';
 import { IngresarComponent } from 'src/app/components/ingresar/ingresar.component';
@@ -24,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: 'src/app/components/info', component:InfoComponent
-  },
+  }
 ];
 
 @NgModule({
