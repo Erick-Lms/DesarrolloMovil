@@ -1,4 +1,6 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import Swiper from 'swiper';
 
 @Component({
@@ -18,7 +20,39 @@ export class InicioPage implements AfterViewInit {
   addItem(item: string) {
     this.items.push(item);
   }
-  constructor() {}
+  constructor(
+    public alertController: AlertController,
+    public router: Router
+  ) {}
+  async cerrarSesion() {
+    const alert = await this.alertController.create({
+      header: 'Cerrar Sesión',
+      message: '¿Estás seguro de que deseas cerrar sesión?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          cssClass: 'secondary',
+        },
+        {
+          text: 'Aceptar',
+          handler: () => {
+            // Lógica para cerrar la sesión
+            this.router.navigate(['./login']);
+          },
+        },
+        
+      ],
+      backdropDismiss: false , 
+      // Evita que se cierre haciendo clic en el fondo
+      
+    });
+
+    await alert.present();
+  }
+  cofiguracion(){
+    this.router.navigate(['/tabs/setting']);
+  }
   ngOnInit(){
     
   }
@@ -41,4 +75,4 @@ export class InicioPage implements AfterViewInit {
         clickable: true,
       },
     };
-  }
+}

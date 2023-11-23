@@ -1,18 +1,47 @@
-  .container{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // height: 100vh;
-  }
-   
-    form {
-      background-color: aquamarine;
-      border: 1px solid black;
-      width: 22rem;
-      height: 20rem;
-      margin: 20px;
-      padding: 20px;
-      border-radius: 5%;
 
-    }
+.container {
+  max-width: 300px;
+  // margin: auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-image: url('https://img.freepik.com/fotos-premium/fondo-negro-geometrico-resumen-4k-tono-oscuro-fondo-pantalla-negro-telon-fondo-degradado-animacion_715671-1537.jpg');
+  background-size: cover; // Ajusta el tamaño para cubrir completamente el contenedor
+  background-position: center; // Centra la imagen en el fondo
+  background-repeat: no-repeat; // Evita que la imagen de fondo se repita
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: 50%; // Centra el contenedor verticalmente en relación con la pantalla
+  left: 50%; // Centra el contenedor horizontalmente en relación con la pantalla
+  transform: translate(-50%, -50%);
+  // margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// Estilo para el formulario
+form {
+  width: 100%;
+}
+
+// Estilo para los elementos de entrada
+ion-item {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+// Estilo para el botón de ingreso
+ion-button {
+  width: 100%;
+  margin-top: 20px;
+  color:wheat;
+  border: 1px solid #000000;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+// .logo {
+//   background: #000000;
+// }
+
+

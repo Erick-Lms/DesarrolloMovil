@@ -1,16 +1,23 @@
 <ion-content class="ion-padding ion-text-center">
+ 
+ 
   <div class="container flex flex-justify-content-center align-items-center" >
+
+    <div class="logo">
+    </div>
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <ion-card-header>
+          <ion-card-title>Iniciar Sesión</ion-card-title>
+        </ion-card-header>
         <ion-item>
           <ion-label position="floating">Usuario</ion-label>
-          <ion-input type="text" formControlName="username"></ion-input>
+          <ion-input type="text" formControlName="username" ></ion-input>
         </ion-item>
         <div *ngIf="isUsernameInvalid()">
           <ion-text color="danger" class="ion-padding-start">
             Usuario es requerido.
           </ion-text>
         </div>
-
         <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
           <ion-input type="password" formControlName="password"></ion-input>
@@ -25,3 +32,4 @@
       </form>
   </div>
 </ion-content>
+
