@@ -1,21 +1,24 @@
-// transferencia.component.module.ts
-
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 import { TransferenciaComponent } from './transferencia.component';
+import { SharedService } from 'src/app/services/shared.service';
 
 @NgModule({
   declarations: [
     TransferenciaComponent,
-    // Otros componentes si los tienes
   ],
   imports: [
-    IonicModule,
-    // Otros módulos si los necesitas
+    IonicModule, CommonModule,
   ],
   exports: [
     TransferenciaComponent,
-    // Otros componentes y módulos exportados si es necesario
   ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
+  providers: [
+    SharedService
+  ]
 })
 export class TransferenciaComponentModule {}
