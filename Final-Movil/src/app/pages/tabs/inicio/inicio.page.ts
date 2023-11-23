@@ -50,7 +50,7 @@ export class InicioPage implements AfterViewInit {
 
     await alert.present();
   }
-  cofiguracion(){
+  configuracion(){
     this.router.navigate(['/tabs/setting']);
   }
   ngOnInit(){
@@ -62,7 +62,7 @@ export class InicioPage implements AfterViewInit {
       { color: 'ligth', name: 'Transferir', image: 'assets/icon/transfer-money.png', route: 'src/app/components/transferencia'},
       { color: 'ligth', name: 'Sacar', image: 'assets/icon/arrow.png', route: 'src/app/components/sacar'},
       { color: 'ligth', name: 'Información', image: 'assets/icon/info.png', route: 'src/app/components/info'},
-    ];
+  ];
   ngAfterViewInit() {
       this.swiper = new Swiper(this.swiperContainer.nativeElement, this.swiperConfig);
   }

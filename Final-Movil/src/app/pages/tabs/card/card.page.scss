@@ -1,0 +1,24 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* Establece la altura */
+}
+  
+img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    max-height: 100%; /* Ajusta la altura máxima de la imagen */
+}
+
+.datos {
+    margin: 25px;
+    padding: 16px;
+    align-items: center;
+    background-color: rgba(73, 110, 230, 0.596);
+    border-radius: 20px 5px;
+}
+.list-cambios {
+    margin: 20px;    
+  }
+  
