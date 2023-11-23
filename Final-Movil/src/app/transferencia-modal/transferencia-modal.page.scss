@@ -1,0 +1,65 @@
+/* Agrega estilos específicos para el modal */
+ion-header {
+    ion-toolbar {
+      --background: #3880ff; /* Color de fondo del encabezado */
+      color: #fff; /* Color del texto del encabezado */
+    }
+  
+    ion-title {
+      font-size: 1.5em; /* Tamaño de fuente del título del encabezado */
+    }
+  }
+  
+  ion-content {
+    ion-list {
+      ion-item {
+        ion-icon {
+          font-size: 2em; /* Tamaño de fuente del ícono del contacto */
+        //   margin-end: 10px; /* Espaciado a la derecha del ícono del contacto */
+        }
+  
+        ion-label {
+          font-weight: bold; /* Texto del contacto en negrita */
+        }
+      }
+  
+      ion-item:nth-child(odd) {
+        --ion-background-color: #f4f4f4; /* Fondo alternativo para filas impares */
+      }
+  
+      ion-item:last-child {
+        border-bottom: none; /* Elimina el borde inferior del último elemento */
+      }
+    }
+  
+    ion-item {
+      ion-label {
+        font-weight: bold; /* Texto de las etiquetas en negrita */
+      }
+  
+      ion-input {
+        margin-top: 10px;
+        width: 100%;
+        border: 1px solid #ccc; /* Borde del campo de entrada */
+        border-radius: 5px; /* Bordes redondeados del campo de entrada */
+      }
+    }
+  
+    ion-button {
+      margin-top: 15px;
+       /* Espaciado superior entre los botones y el contenido */
+    }
+  
+    ion-button.cancelar {
+      --background: #dc3545; /* Color de fondo del botón Cancelar */
+      width: 100%;
+
+    }
+  
+    ion-button.confirmar {
+      --background: #28a745; /* Color de fondo del botón Confirmar */
+      width: 100%;
+
+    }
+  }
+  

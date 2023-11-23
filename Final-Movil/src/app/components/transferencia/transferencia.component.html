@@ -29,7 +29,7 @@
         <div class="swiper-wrapper">
           <ng-container *ngFor="let contacto of contact">
             <div class="swiper-slide" *ngIf="contacto.id <= 5">            
-              <ion-button [color]="contacto.color" class="rounded-button">
+              <ion-button [color]="contacto.color" class="rounded-button" (click)="navigateToTransferenciaModal()">
                 <img src="{{ contacto.image }}" alt="{{ contacto.name }}-image" class="icon-image">
               </ion-button>
               <ion-label button-label>{{ contacto.name }}</ion-label>
@@ -49,7 +49,7 @@
     <ion-content>
       <ion-list>
         <ion-item-sliding *ngFor="let contacto of contact.slice(6, 10)">
-          <ion-item button>
+          <ion-item button (click)="navigateToTransferenciaModal()">
             <img src="{{ contacto.image }}" alt="{{ contacto.name }}-image" class="avatar">
             <ion-label>
               <h3>{{ contacto.name }}</h3>

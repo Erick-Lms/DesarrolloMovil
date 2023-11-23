@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import Swiper from 'swiper';
 import { Contactos } from 'src/app/interfaces/contactos';
+import { Router } from '@angular/router';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-transferencia',
@@ -10,7 +12,7 @@ import { Contactos } from 'src/app/interfaces/contactos';
 export class TransferenciaComponent  implements AfterViewInit { 
   @ViewChild('swiperContainer', {read: ElementRef}) swiperContainer!: ElementRef;
   swiper: Swiper | undefined;
-  objContactos: Contactos | undefined;
+  // objContactos: Contactos | undefined;
 
   contact: Contactos[] = [
     { id: 1, color: 'white', name: 'Juan Marquez', image: './assets/avatars/avatar.png', n_cuenta: '1589623457879651', banco: 'Banco Santander Rio'},
@@ -25,7 +27,18 @@ export class TransferenciaComponent  implements AfterViewInit {
     { id: 10, color: 'white', name: 'Belingham', image: './assets/avatars/avatar4.png', n_cuenta: '457896515896231', banco: 'Banco Cabal'},
   
   ];
-  constructor() {}
+  constructor(
+    private sharedService: SharedService,
+    private router: Router,
+    ) {}
+
+
+  navigateToTransferenciaModal() {
+      // Usar el servicio para compartir la lista de contactos
+      this.sharedService.setContactos(this.contact);
+  
+      this.router.navigate(['./transferencia-modal']);
+    }
   ngOnInit() {}
 
   shuffleArray(array: any[]): any[] {
@@ -44,6 +57,7 @@ export class TransferenciaComponent  implements AfterViewInit {
       clicable: true,
     },
   };
+
   //  accionDelBoton() {
   //   // Aquí puedes agregar la lógica que se ejecutará cuando se haga clic en el botón
   //     console.log('Botón clicado');

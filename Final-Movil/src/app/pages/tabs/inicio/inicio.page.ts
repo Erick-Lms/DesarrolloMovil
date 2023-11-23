@@ -1,6 +1,7 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import Swiper from 'swiper';
 
 @Component({
@@ -11,7 +12,7 @@ import Swiper from 'swiper';
 export class InicioPage implements AfterViewInit {
 
   @ViewChild('swiperContainer', { read: ElementRef }) swiperContainer!: ElementRef;
-  saldo: number = 10000;
+  saldo = 14568;
 
   swiper: Swiper | undefined;
  
@@ -21,9 +22,16 @@ export class InicioPage implements AfterViewInit {
     this.items.push(item);
   }
   constructor(
+    private router: Router,
+    private navCtrl: NavController,
     public alertController: AlertController,
-    public router: Router
   ) {}
+
+  navigateToTransferenciaModal() {
+    this.navCtrl.navigateForward('/transferencia-modal', { state: { saldo: this.saldo } });
+  }
+  ngOnInit(): void {
+  }
   async cerrarSesion() {
     const alert = await this.alertController.create({
       header: 'Cerrar Sesión',
@@ -53,9 +61,9 @@ export class InicioPage implements AfterViewInit {
   cofiguracion(){
     this.router.navigate(['/tabs/setting']);
   }
-  ngOnInit(){
-    
-  }
+  // navigateToTransferenciaModal(saldo: number) {
+  //   this.navCtrl.navigateForward(['/transferencia-modal', saldo]);
+  // }
    
   options = [
       { color: 'ligth', name: 'Ingresar', image: 'assets/icon/money.png', route: 'src/app/components/ingresar'},

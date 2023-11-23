@@ -1,5 +1,26 @@
-<ion-header class="ion-no-border" translucent>
+<!-- <ion-header class="ion-no-border" translucent>
   <ion-toolbar>
     <ion-title color="primary">Movimientos</ion-title>
   </ion-toolbar>
+</ion-header> -->
+<!-- movimientos.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Movimientos
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let transferencia of transferencias">
+      <ion-label>
+        <h2>{{ transferencia.nombre }}</h2>
+        <p>{{ transferencia.fechaHora | date: 'dd/MM/yyyy HH:mm:ss' }}</p>
+        <p>Monto: $ {{ transferencia.monto }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

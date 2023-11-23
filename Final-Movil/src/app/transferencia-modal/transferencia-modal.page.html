@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Transferencia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- Modal Content -->
+<ion-content>
+  <ion-list>
+    <!-- Mostrar detalles del contacto -->
+    <ion-item>
+      <ion-icon [name]="contacto.icon"></ion-icon>
+      <ion-label>{{ contacto.name }}</ion-label>
+    </ion-item>
+    
+    <!-- Mostrar saldo actual -->
+    <ion-item>
+      <ion-label>Saldo Actual: $ {{ saldo }}</ion-label>
+    </ion-item>
+
+    <!-- Input para ingresar monto a transferir -->
+    <ion-item>
+      <ion-label position="floating">Monto a transferir</ion-label>
+      <ion-input type="number" [(ngModel)]="montoTransferir"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botones para confirmar o cancelar la transferencia -->
+  <ion-button expand="full" (click)="cancelar()">Cancelar</ion-button>
+  <ion-button expand="full" (click)="confirmar()">Confirmar</ion-button>
+</ion-content>
+
