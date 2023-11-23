@@ -1,3 +1,5 @@
+// @import '~swiper/swiper-bundle.css';
+
 .boton-add {
     ion-button {
         padding: 10px;
@@ -5,13 +7,95 @@
         justify-content: center;
         img{
             position: relative;
-            height: 50px;
-            width: 50px;
-            margin: 15px;
+            height: 40px;
+            width: 40px;
+            margin: 20px;
         }    
         ion-label {
-            text-align: center;
-            color: black;          
+            color: black;               
         }
     }  
-}
+  }
+  .swiper-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 10px;
+  
+      .swiper-slide {
+        flex: 0 0 auto;
+        text-align: center;
+        color: white;
+  
+        ion-button {
+          [color] {
+            --background: transparent; // Ajusta el color del fondo del botón
+          }
+        ion-label.button-label {
+          color: white;
+        }
+  
+          img.icon-image {
+            max-width: 50%; // Hace que la imagen sea responsive
+            height: 40%;    // Ajusta automáticamente la altura según el ancho
+          }
+        }
+      }
+    }
+  
+    .swiper-pagination {
+      margin-top: 10px;
+    }
+  }
+  // ion-list {
+  //   background-color: #f4f4f4; /* Cambia el color de fondo según tus preferencias */
+  // }
+  
+  ion-item-sliding {
+    margin-bottom: 10px;
+  }
+  
+  // ion-item {
+  //   display: flex;
+  //   align-items: center;
+  //   padding: 10px;
+  //   background-color: #fff; /* Fondo del item */
+  //   border-radius: 8px; /* Bordes redondeados */
+  //   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  // }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-right: 15px;
+  }
+  
+  ion-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Cambia el color del texto según tus preferencias */
+  }
+  
+  /* Estilo para las acciones adicionales (si las necesitas) */
+  ion-item-options {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  // ion-item-option {
+  //   color: #fff; /* Color del texto de las opciones */
+  //   background-color: #007bff; /* Color de fondo de las opciones */
+  // }
+  
+  /* Cambia el color al deslizar la acción */
+  // ion-item-option.activated {
+  //   background-color: #0056b3;
+  // }
+  

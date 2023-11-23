@@ -34,8 +34,8 @@ export class InicioPage implements AfterViewInit {
   }
 
     swiperConfig = {
-      slidesPerView: 3,
-      spaceBetween: 10,
+      slidesPerView: 3.5,
+      spaceBetween: 5,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
