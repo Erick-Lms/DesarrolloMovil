@@ -6,14 +6,14 @@ import { TransferenciasService } from 'src/app/services/transferenciaservice.ser
   styleUrls: ['./transfer.page.scss'],
 })
 export class TransferPage implements OnInit {
-  transferencias!: any[];
+  transferencias: any[] | undefined;
 
   constructor(private transferenciasService: TransferenciasService) {}
 
 
   ngOnInit() {
     this.transferencias = this.transferenciasService.obtenerTransferencias();
-
+    console.log(this.transferencias);
   }
 
 }

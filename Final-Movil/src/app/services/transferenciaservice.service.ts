@@ -1,18 +1,19 @@
-// transferencias.service.ts
-
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TransferenciasService {
+  private saldoSubject = new Subject<number>();
+  saldo$ = this.saldoSubject.asObservable();
+
   transferencias: any[] = [];
 
   constructor() {}
 
   guardarTransferencia(transferencia: any) {
     this.transferencias.push(transferencia);
-    // Puedes agregar lógica adicional aquí, como enviar los datos al servidor, etc.
   }
 
   obtenerTransferencias() {

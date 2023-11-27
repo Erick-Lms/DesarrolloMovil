@@ -20,8 +20,8 @@ export class TransferenciaComponent  implements AfterViewInit {
     ) {}
 
 
-  navigateToTransferenciaModal() {  
-      this.router.navigate(['./transferencia-modal']);
+  navigateToTransferenciaModal( contacto: any) {  
+      this.router.navigate(['./transferencia-modal'], {state: {contacto}});
     }
   ngOnInit() {
     this.contact = this.sharedService.getContactos();
