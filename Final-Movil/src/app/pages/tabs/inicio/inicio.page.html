@@ -55,12 +55,18 @@
   <!-- funcionalidad de movimientos -->
   <div class="mov">
     <ion-label>Movimientos</ion-label>
-   </div>
-   <div class="list-cambios">
-    <ion-list>
-      <ion-item *ngFor="let item of items">
-        {{ item }}
-      </ion-item>
-     </ion-list>
+  </div>
+  <div>
+    <ion-content>
+      <ion-list>
+        <ion-item *ngFor="let transferencia of transferencias">
+          <ion-label>
+            <h2>{{ transferencia.nombre }}</h2>
+            <p>{{ transferencia.fechaHora | date: 'dd/MM/yyyy HH:mm:ss' }}</p>
+            <p>Monto: $ {{ transferencia.monto }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
   </div>
 </ion-content>
