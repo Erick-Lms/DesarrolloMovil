@@ -1,20 +1,12 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="src/app/pages/tabs/inicio"></ion-back-button>
+      <ion-back-button defaultHref="tabs/inicio"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      Título de la Página
+      Ingresar
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<!-- ingresar.component.html -->
+ <!-- ingresar.component.html -->
 
-<ion-content class="ion-padding">
-  <ion-item>
-    <ion-label position="floating">Monto</ion-label>
-    <ion-input type="number" [(ngModel)]="monto" placeholder="Ingrese el monto"></ion-input>
-  </ion-item>
-
-  <ion-button expand="full" (click)="guardarMonto()">Guardar</ion-button>
-</ion-content>

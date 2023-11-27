@@ -2,7 +2,9 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
+import { TransferenciaComponent } from 'src/app/components/transferencia/transferencia.component';
 import Swiper from 'swiper';
+
 
 @Component({
   selector: 'app-inicio',
@@ -10,6 +12,8 @@ import Swiper from 'swiper';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements AfterViewInit {
+
+  const tranfe : TransferenciaComponent
 
   @ViewChild('swiperContainer', { read: ElementRef }) swiperContainer!: ElementRef;
   saldo = 14568;

@@ -12,6 +12,7 @@ import { SharedService } from 'src/app/services/shared.service';
 export class TransferenciaComponent  implements AfterViewInit { 
   @ViewChild('swiperContainer', {read: ElementRef}) swiperContainer!: ElementRef;
   swiper: Swiper | undefined;
+  selectedContact: Contactos | undefined;
   // objContactos: Contactos | undefined;
 
   contact: Contactos[] = [
@@ -30,15 +31,22 @@ export class TransferenciaComponent  implements AfterViewInit {
   constructor(
     private sharedService: SharedService,
     private router: Router,
-    ) {}
+    ) 
+  {}
 
+  
+
+  
 
   navigateToTransferenciaModal() {
+  
+    
       // Usar el servicio para compartir la lista de contactos
       this.sharedService.setContactos(this.contact);
+
   
       this.router.navigate(['./transferencia-modal']);
-    }
+  }
   ngOnInit() {}
 
   shuffleArray(array: any[]): any[] {
@@ -61,5 +69,5 @@ export class TransferenciaComponent  implements AfterViewInit {
   //  accionDelBoton() {
   //   // Aquí puedes agregar la lógica que se ejecutará cuando se haga clic en el botón
   //     console.log('Botón clicado');
-  }
+}
 // }

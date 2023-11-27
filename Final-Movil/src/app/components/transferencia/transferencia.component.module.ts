@@ -7,6 +7,7 @@ import { SharedService } from 'src/app/services/shared.service';
 @NgModule({
   declarations: [
     TransferenciaComponent,
+    
   ],
   imports: [
     IonicModule, CommonModule,
